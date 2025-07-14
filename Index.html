@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Billie Eilish</title>
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ffcc;
+      margin: 40px 0 10px;
+      font-size: 3rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 2;
+      position: relative;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .imagen {
+      display: block;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #00ffaa66;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      margin: 50px 0;
+      font-size: 13px;
+    }
+
+    /* Cascada de figuras */
+    .figure {
+      position: absolute;
+      width: 40px;
+      height: 80px;
+      background-image: url('https://i.pinimg.com/originals/57/70/f2/5770f2da294520c05b15365f96724ae6.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      animation: fall 10s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -100px;
+        opacity: 0.2;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 110vh;
+        opacity: 0;
+        transform: rotate(30deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Billie Eilish</h1>
+
+  <div class="container">
+    <p><strong>Billie Eilish Pirate Baird O’Connell</strong> nació el 18 de diciembre de 2001 en Los Ángeles, California. Desde muy pequeña estuvo rodeada de arte: sus padres eran actores y músicos, y ella comenzó a cantar en un coro infantil a los 8 años.</p>
+
+    <img src="https://i.pinimg.com/originals/51/5d/93/515d933f949747f4b142d1e67edbd189.jpg" alt="Billie 1" class="imagen">
+
+    <p>A los 13 años, escribió su primera canción junto a su hermano Finneas. En 2015 grabó "Ocean Eyes", que subieron a SoundCloud sin grandes expectativas, pero se volvió viral. Ese fue el inicio de su carrera musical.</p>
+
+    <img src="https://i.pinimg.com/originals/ea/ce/43/eace430c10c2489c5f5d3b7607c0db02.jpg" alt="Billie 2" class="imagen">
+
+    <p>En 2017 lanzó su primer EP: <em>Don’t Smile at Me</em>. Su popularidad creció rápidamente y en 2019 lanzó su álbum debut: <strong>When We All Fall Asleep, Where Do We Go?</strong>, con éxitos como “Bad Guy”.</p>
+
+    <img src="https://i.pinimg.com/originals/08/d9/8a/08d98a2c649d370e19c27f96c7e65a2f.jpg" alt="Billie 3" class="imagen">
+
+    <p>Ha ganado múltiples premios, incluyendo <strong>9 Grammys</strong> y <strong>2 premios Oscar</strong>. Es reconocida por su autenticidad, su estilo único, su forma de vestir y su compromiso con temas como la salud mental y el medio ambiente.</p>
+
+    <img src="https://i.pinimg.com/originals/b2/6d/ff/b26dffb2f9d7a72cfb3de18092ac64cd.jpg" alt="Billie 4" class="imagen">
+
+    <p>En 2024 lanzó su tercer álbum: <strong>Hit Me Hard and Soft</strong>, con una gira internacional en 2025. Billie Eilish continúa siendo una voz influyente de su generación.</p>
+  </div>
+
+  <footer>
+    Créditos: Wikipedia, Biography.com, Rolling Stone
+  </footer>
+
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const icon = document.createElement('div');
+      icon.classList.add('figure');
+      icon.style.left = Math.random() * 100 + 'vw';
+      icon.style.animationDelay = Math.random() * 10 + 's';
+      icon.style.width = Math.random() * 20 + 30 + 'px';
+      icon.style.height = Math.random() * 60 + 60 + 'px';
+      document.body.appendChild(icon);
+    }
+  </script>
+
+</body>
+</html>
